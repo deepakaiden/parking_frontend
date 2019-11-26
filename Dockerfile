@@ -1,5 +1,6 @@
 FROM deepakaiden/apachetomcat
 MAINTAINER deepakaiden
 
-COPY $WORKSPACE/build/* /usr/local/tomcat/webapps/
+RUN mkdir /usr/local/tomcat/webapps/build
+COPY $WORKSPACE/build/* /usr/local/tomcat/webapps/build
 EXPOSE 8080
